@@ -90,3 +90,10 @@ input[type="file"] {
 .sketch-picker > div:nth-child(3) {
   display: none !important;
 }
+
+.wardrobe{
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)), url('../images/WardrobeBG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+}
