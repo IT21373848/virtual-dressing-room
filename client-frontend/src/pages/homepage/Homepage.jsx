@@ -36,11 +36,11 @@ const Homepage = () => {
             product.quantity = 1 
             return(
             <a key={product._id} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 border-2">
+              <div className="aspect-h-1 aspect-w-1 w-72 h-82 xl:aspect-h-8 xl:aspect-w-7 overflow-hidden rounded-lg bg-gray-200 border-2">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75 "
+                  className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
               </div>
               <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
