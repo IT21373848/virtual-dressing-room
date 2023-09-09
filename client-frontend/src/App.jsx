@@ -12,6 +12,8 @@ import Wardrobe from "./pages/Wardrobe";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import Blog from "./pages/Blog";
+
 import NavbarLogin from "./components/navbar/Navbar-login";
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/blog" element={<Blog />} />
+
           </Routes>
         </div>
       </Router>
