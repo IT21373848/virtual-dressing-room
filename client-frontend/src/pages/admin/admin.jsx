@@ -102,7 +102,7 @@ function AdminPanel() {
 
   return (
     <div className="App">
-      <h1>Admin Panel</h1>
+        <h3 className="flex items-center justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray">Add Produsts</h3>
       <div className="grid gap-6 mb-6 md:grid-cols-2">
         <form>
         <div className="mb-6">
@@ -143,7 +143,7 @@ function AdminPanel() {
           )}
         </form>
       </div>
-        <h1>List</h1>
+      <h3 className="flex items-center justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray">Products</h3>
       <div className="relative overflow-x-auto">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
