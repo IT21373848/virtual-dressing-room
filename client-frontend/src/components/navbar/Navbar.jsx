@@ -57,7 +57,7 @@ const Navbar = () => {
           </NavLink>
 
             {/* <!-- Profile dropdown --> */}
-            <NavLink to="/user"><button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ">
+            <NavLink to="/profile"><button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ">
               <span class="absolute -inset-1.5"></span>
               <span class="sr-only">View user</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
