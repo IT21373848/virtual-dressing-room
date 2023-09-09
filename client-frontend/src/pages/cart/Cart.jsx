@@ -14,7 +14,7 @@ const Cart = () => {
   return (
     <div>
       <div class="h-screen bg-gray-100 pt-20">
-        <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+      <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-5xl dark:text-gray">Cart Items</h1>
         <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
           <div class="rounded-lg md:w-2/3">
           {state.map((item, index) => {
