@@ -179,14 +179,14 @@ const Profile = () => {
         </div>
 
         {/* Pin to top right corner */}
-        <div className="absolute top-10 right-0 h-12 w-18 p-4">
+        <div className="absolute top-26 right-0 h-12 w-18 p-6">
           {/* Dark theme toggle button */}
-          <button
+          {/* <button
             className="js-change-theme focus:outline-none"
             onClick={toggleTheme}
           >
             🌙
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
