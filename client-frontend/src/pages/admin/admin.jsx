@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import "./AdminPanel.css";
+import "./AdminPanel.css";
 
 function AdminPanel() {
   const [Products, setProducts] = useState([]);
