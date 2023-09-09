@@ -9,7 +9,9 @@ import Cart from "./pages/cart/Cart"
 import Homepage from "./pages/homepage/Homepage"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Wardrobe from "./pages/Wardrobe";
-
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 function App() {
 
   return (
@@ -22,7 +24,9 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/wardrobe" element={<Wardrobe />} />
             <Route path="/admin" element={<AdminPanel />} />
-            
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </Router>

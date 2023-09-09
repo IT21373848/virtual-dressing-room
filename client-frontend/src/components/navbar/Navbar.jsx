@@ -15,7 +15,8 @@ const Navbar = () => {
             </ul>
         </nav>
         <div class="cart-icon">
-            <NavLink to="/cart"><i class='bx bx-cart'></i></NavLink>
+            <NavLink to="/cart"><i className='bx bx-cart'></i></NavLink>
+            <NavLink to="/profile"><i class='bx bx bx-user'></i></NavLink>
         </div>
     </div>
   );
