@@ -10,6 +10,13 @@ const PORT = process.env.PORT || 8070;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
+
+app.use(
+    bodyParser.urlencoded({
+        extended: false
+    })
+)
 
 const URL = process.env.MONGODB_URL;
 
@@ -29,3 +36,6 @@ app.use("/products",Router);
 app.listen(PORT, () =>{
     console.log(`Server is up and running on port number : ${PORT}`);
 }) 
+
+var Users = require('./routes/Users.jsx');
+app.use('/users', Users);
