@@ -8,6 +8,7 @@ import AdminPanel from "./pages/admin/admin"
 import Cart from "./pages/cart/Cart"
 import Homepage from "./pages/homepage/Homepage"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Wardrobe from "./pages/Wardrobe";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Routes>
           <Route path="/" element={<Homepage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/wardrobe" element={<Wardrobe />} />
             <Route path="/admin" element={<AdminPanel />} />
             
           </Routes>
