@@ -15,6 +15,8 @@ import Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
 
 import NavbarLogin from "./components/navbar/Navbar-login";
+import CreateBlog from "./pages/admin/CreateBlog";
+import AllBlogs from "./pages/admin/AllBlogs";
 function App() {
   return (
     <CartProvider>
@@ -31,6 +33,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/admin/blog" element={<CreateBlog />} />
+            <Route path="/admin/allblog" element={<AllBlogs />} />
 
           </Routes>
         </div>

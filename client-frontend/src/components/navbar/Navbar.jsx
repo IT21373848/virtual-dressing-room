@@ -1,8 +1,27 @@
 /** @format */
 
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
+  const userLink = (
+    <>
+      <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/admin/blog">Create Blog</NavLink></a>
+      <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/admin/allblog">All Blog</NavLink></a>
+    </>
+  )
+  const loginRegLink = (
+    <a />
+  )
+  const [isLoggedIn, setIsLogged] = useState('');
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.usertoken
+    if (isLoggedIn) {
+      setIsLogged(true)
+    }
+
+  }, [])
   return (
     <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -42,19 +61,20 @@ const Navbar = () => {
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/">Store</NavLink></a>
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/wardrobe">Wardrobe</NavLink></a>
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/blog">Blog</NavLink></a>
+                {isLoggedIn ? userLink : loginRegLink}
               </div>
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            
-          <NavLink to="/cart"><button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ">
+
+            <NavLink to="/cart"><button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ">
               <span class="absolute -inset-1.5"></span>
               <span class="sr-only">View cart</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
+                <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
               </svg>
             </button>
-          </NavLink>
+            </NavLink>
 
             {/* <!-- Profile dropdown -->
             <NavLink to="/profile"><button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ">

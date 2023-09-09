@@ -11,6 +11,9 @@ async function readBlog(req, res) {
 }
 
 async function createBlog(req, res) {
+    if(req.body.image == ''){
+        req.body.image = 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg'
+    }
     const data = req.body;
     console.log(data);
     try {
