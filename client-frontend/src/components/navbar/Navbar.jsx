@@ -9,6 +9,9 @@ const Navbar = () => {
         <nav>
             <ul>
                 <li><a><NavLink to="/">Store</NavLink></a></li>
+                <li><a><NavLink to="/wardrobe">Wardrobe</NavLink></a></li>
+                <li><a><NavLink to="/">-</NavLink></a></li>
+                <li><a><NavLink to="/">-</NavLink></a></li>
             </ul>
         </nav>
         <div class="cart-icon">
