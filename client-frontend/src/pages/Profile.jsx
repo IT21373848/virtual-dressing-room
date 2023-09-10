@@ -1,6 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 const Profile = () => {
+  //taking user
+  const token = localStorage.getItem("usertoken");
+  const decoded = jwt_decode(token);
+
+  const userData = {
+    id: decoded.id,
+    first_name: decoded.first_name,
+    last_name: decoded.last_name,
+    email: decoded.email,
+    gender: decoded.gender
+  };
+
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   // Function to toggle between light and dark themes
@@ -26,22 +40,39 @@ const Profile = () => {
     themeStyles.textColor = "text-gray-100";
     themeStyles.profileBgColor = "bg-gray-900";
   }
-
-  // Sample profile and body measurements data
-  const [profileData, setProfileData] = useState({
-    name: "Your Name",
-    gender: "Your Gender",
+  const profileData = {
+    name: `${userData.first_name} ${userData.last_name}`,
+    email: userData.email,
+    gender: userData.gender,
     description:
       "Totally optional short description about yourself, what you do, and so on.",
-  });
+  };
 
-  const [bodyMeasurements, setBodyMeasurements] = useState({
-    height: "180 cm",
-    weight: "70 kg",
-    chest: "100 cm",
-    waist: "80 cm",
-    hips: "95 cm",
-  });
+  const [sizeData, setSizeData] = useState({});
+  const [bodyMeasurements, setBodyMeasurements] = useState({});
+
+  useEffect(() => {
+    if (profileData.email !== undefined) {
+      axios
+        .get(`http://localhost:8070/messurements?email=${profileData.email}`)
+        .then((response) => {
+          setSizeData(response.data);
+          console.log("size", sizeData);
+
+          // Now that you have the size data, you can set bodyMeasurements
+          setBodyMeasurements({
+            height: response.data.height || "", // Set height or leave it empty if not available
+            weight: response.data.weight || "",
+            chest: response.data.chest || "",
+            waist: response.data.waist || "",
+            hips: response.data.hips || "",
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [])
 
   const [isEditingBodyMeasurements, setIsEditingBodyMeasurements] =
     useState(false);
@@ -138,19 +169,19 @@ const Profile = () => {
             ) : (
               <div className="pt-4">
                 <p className="text-gray-600">
-                  <strong>Height:</strong> {bodyMeasurements.height}
+                  <strong>Height:</strong> {bodyMeasurements.height} cm
                 </p>
                 <p className="text-gray-600">
-                  <strong>Weight:</strong> {bodyMeasurements.weight}
+                  <strong>Weight:</strong> {bodyMeasurements.weight} Kg
                 </p>
                 <p className="text-gray-600">
-                  <strong>Chest:</strong> {bodyMeasurements.chest}
+                  <strong>Chest:</strong> {bodyMeasurements.chest} cm
                 </p>
                 <p className="text-gray-600">
-                  <strong>Waist:</strong> {bodyMeasurements.waist}
+                  <strong>Waist:</strong> {bodyMeasurements.waist} cm
                 </p>
                 <p className="text-gray-600">
-                  <strong>Hips:</strong> {bodyMeasurements.hips}
+                  <strong>Hips:</strong> {bodyMeasurements.hips} cm
                 </p>
               </div>
             )}
