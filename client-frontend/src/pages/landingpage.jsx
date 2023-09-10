@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router
 
+const heroSectionStyle = {
+    backgroundImage: `url("https://images.unsplash.com/photo-1694352688654-13e6dd6a240c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
+
 const LandingPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-cover bg-center h-screen flex items-center">
+      <section className="h-screen flex items-center" style={heroSectionStyle}>
         <div className="container mx-auto text-center">
           <h2 className="text-5xl font-extrabold text-white mb-4">
             Discover the Latest Trends
