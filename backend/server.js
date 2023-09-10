@@ -42,3 +42,6 @@ app.listen(PORT, () =>{
 
 var Users = require('./routes/Users.jsx');
 app.use('/users', Users);
+
+var Messurements = require('./routes/Messurements.jsx');
+app.use('/messurements', Messurements);

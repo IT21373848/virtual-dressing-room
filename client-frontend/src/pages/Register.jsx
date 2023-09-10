@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { register } from "./UserFunction";
 import { withRouter } from "./withRouter";
+import axios from "axios";
 
 class Register extends Component {
   constructor() {
@@ -23,7 +24,6 @@ class Register extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    debugger;
     const user = {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
@@ -32,15 +32,31 @@ class Register extends Component {
       gender: this.state.gender,
     };
 
-    register(user).then((res) => {
+    register(user)
+    .then((res) => {
       if (res.registered) {
-        this.props.navigate("/login");
-        window.alert("Registered Successful");
+        // Make the second POST request and handle it separately
+        return axios.post("http://localhost:8070/messurements/add", {
+          email: user.email,
+          height: 180,
+          weight: 70,
+          chest: 100,
+          waist: 80,
+          hips: 95,
+        });
       } else {
         window.alert("Register failed");
+        throw new Error("Registration failed");
       }
+    })
+    .then(() => {
+      this.props.navigate("/login");
+      window.alert("Registered Successfully");
+    })
+    .catch((error) => {
+      console.error(error);
     });
-  }
+}
 
   render() {
     return (
