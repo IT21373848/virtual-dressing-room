@@ -12,7 +12,7 @@ const Profile = () => {
     first_name: decoded.first_name,
     last_name: decoded.last_name,
     email: decoded.email,
-    gender: decoded.gender
+    gender: decoded.gender,
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -72,7 +72,7 @@ const Profile = () => {
           console.log(error);
         });
     }
-  }, [])
+  }, []);
 
   const [isEditingBodyMeasurements, setIsEditingBodyMeasurements] =
     useState(false);
@@ -99,29 +99,31 @@ const Profile = () => {
         backgroundPosition: "center",
       }}
     >
- <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
-      {/* Main Col */}
-      <div
-        id="profile"
-        className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl mx-6 lg:mx-0"
-        style={{
-          backgroundColor: themeStyles.backgroundColor,
-          // You can remove textColor from here
-          // It will be handled through Tailwind CSS classes
-          // textColor: themeStyles.textColor,
-        }}
-      >
-        <div className="p-4 md:p-12 text-center lg:text-left">
-          <h1 className={`text-3xl font-bold pt-8 lg:pt-0 ${themeStyles.textColor}`}>
-            {profileData.name}
-          </h1>
-          <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
-          <p className={`pt-2 text-xs lg:text-sm ${themeStyles.textColor}`}>
-            <strong>Gender:</strong> {profileData.gender}
-          </p>
-          <p className={`pt-8 text-sm ${themeStyles.textColor}`}>{profileData.description}</p>
-
-          
+      <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+        {/* Main Col */}
+        <div
+          id="profile"
+          className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl mx-6 lg:mx-0"
+          style={{
+            backgroundColor: themeStyles.backgroundColor,
+            // You can remove textColor from here
+            // It will be handled through Tailwind CSS classes
+            // textColor: themeStyles.textColor,
+          }}
+        >
+          <div className="p-4 md:p-12 text-center lg:text-left">
+            <h1
+              className={`text-3xl font-bold pt-8 lg:pt-0 ${themeStyles.textColor}`}
+            >
+              {profileData.name}
+            </h1>
+            <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+            <p className={`pt-2 text-xs lg:text-sm ${themeStyles.textColor}`}>
+              <strong>Gender:</strong> {profileData.gender}
+            </p>
+            <p className={`pt-8 text-sm ${themeStyles.textColor}`}>
+              {profileData.description}
+            </p>
 
             {isEditingBodyMeasurements ? (
               <div className="pt-4">
@@ -201,12 +203,22 @@ const Profile = () => {
 
         {/* Img Col */}
         <div className="w-full lg:w-2/5">
-          {/* Big profile image for side bar (desktop) */}
-          <img
-            src="https://source.unsplash.com/MP0IUfwrn0A"
-            alt="Profile"
-            className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
-          />
+          {/* Conditionally display an image based on gender */}
+          {userData.gender === "male" ? (
+            // Male profile image
+            <img
+              src="/images/boy.jpg"
+              alt="Profile"
+              className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+            />
+          ) : (
+            // Female profile image
+            <img
+              src="/images/girl.jpg"
+              alt="Profile"
+              className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+            />
+          )}
         </div>
 
         {/* Pin to top right corner */}
