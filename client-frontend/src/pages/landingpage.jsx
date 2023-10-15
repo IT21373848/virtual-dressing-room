@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router
 
 const heroSectionStyle = {
-    backgroundImage: `url("https://images.unsplash.com/photo-1694352688654-13e6dd6a240c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")`,
+    backgroundImage: `url('https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-willo-m-3768005.jpg&fm=jpg')`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -13,11 +13,11 @@ const LandingPage = () => {
     <div>
       {/* Hero Section */}
       <section className="h-screen flex items-center" style={heroSectionStyle}>
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-extrabold text-white mb-4">
+        <div className="container mx-auto text-center bg-transparent">
+          <h2 className="text-5xl font-extrabold text-black mb-4">
             Discover the Latest Trends
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-black-200 mb-8">
             Shop our newest collection of clothing and accessories.
           </p>
           <Link
