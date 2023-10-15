@@ -33,7 +33,7 @@ const ClothConfiguratorFemale = () => {
                 onClick={() => setDown(1)}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>
@@ -49,7 +49,7 @@ const ClothConfiguratorFemale = () => {
                 onClick={() => setUp(1)}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>
@@ -59,7 +59,7 @@ const ClothConfiguratorFemale = () => {
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Shirt</h5>
+              <h5 class="card-title">shirt</h5>
               <p>
                 <label for="exampleColorInput" class="form-label">
                   Color picker
@@ -78,7 +78,7 @@ const ClothConfiguratorFemale = () => {
                 onClick={() => setUp(4)}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>
@@ -140,7 +140,7 @@ const ClothConfiguratorFemale = () => {
                 }}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>
@@ -172,7 +172,7 @@ const ClothConfiguratorFemale = () => {
                 }}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>
@@ -182,7 +182,7 @@ const ClothConfiguratorFemale = () => {
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Short</h5>
+              <h5 class="card-title">Jeans</h5>
               <p>
                 <label for="exampleColorInput" class="form-label">
                   Color picker
@@ -201,7 +201,7 @@ const ClothConfiguratorFemale = () => {
                 onClick={() => setDown(2)}
               >
                 <a href="#" class="btn btn-primary">
-                  Cheng
+                change
                 </a>
               </div>
             </div>

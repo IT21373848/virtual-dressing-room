@@ -16,7 +16,7 @@ const ClothConfigurator = () => {
       <div class="card-group">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Shart A</h5>
+            <h5 class="card-title">shirt A</h5>
             <p class="card-text">
               <div className="configurator_section_title">Dress material</div>
               <div className="configurator_section_values">
@@ -43,14 +43,14 @@ const ClothConfigurator = () => {
               onClick={() => setLeges(1)}
             >
               <a href="#" class="btn btn-primary">
-              Cheng
+              change
               </a>
             </div>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Shart B</h5>
+            <h5 class="card-title">shirt B</h5>
             <p class="card-text">
               <div className="configurator_section_title">Dress material</div>
               <div className="configurator_section_values">
@@ -77,7 +77,7 @@ const ClothConfigurator = () => {
               onClick={() => setLeges(2)}
             >
               <a href="#" class="btn btn-primary">
-              Cheng
+              change
               </a>
             </div>
           </div>
