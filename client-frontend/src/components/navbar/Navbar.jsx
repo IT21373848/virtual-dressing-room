@@ -58,10 +58,11 @@ const Navbar = () => {
               <div class="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/">Home</NavLink></a>
-                <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/">Store</NavLink></a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/store">Store</NavLink></a>
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/wardrobe">Wardrobe</NavLink></a>
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/blog">Blog</NavLink></a>
                 {isLoggedIn ? userLink : loginRegLink}
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/members">Members</NavLink></a>
               </div>
             </div>
           </div>
@@ -95,9 +96,10 @@ const Navbar = () => {
         <div class="space-y-1 px-2 pb-3 pt-2">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/">Home</NavLink></a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/">Store</NavLink></a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/store">Store</NavLink></a>
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/wardrobe">Wardrobe</NavLink></a>
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/blog">Blog</NavLink></a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/blog">Members</NavLink></a>
         </div>
       </div>
     </nav>
@@ -131,3 +133,20 @@ export default Navbar;
 // };
 
 // export default Navbar;
+
+
+
+      {/* Header */}
+      // <header className="bg-gray-900 text-white py-6">
+      //   <div className="container mx-auto flex justify-between items-center">
+      //     <h1 className="text-4xl font-bold">Clothing Store</h1>
+      //     <nav>
+      //       <ul className="flex space-x-4">
+      //         <li className="hover:text-gray-400">Home</li>
+      //         <li className="hover:text-gray-400">Shop</li>
+      //         <li className="hover:text-gray-400">About</li>
+      //         <li className="hover:text-gray-400">Contact</li>
+      //       </ul>
+      //     </nav>
+      //   </div>
+      // </header>

@@ -13,10 +13,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
-
+import LandingPage from "./pages/landingpage";
+import Members from "./pages/Members";
 import NavbarLogin from "./components/navbar/Navbar-login";
 import CreateBlog from "./pages/admin/CreateBlog";
 import AllBlogs from "./pages/admin/AllBlogs";
+
 function App() {
   return (
     <CartProvider>
@@ -25,7 +27,8 @@ function App() {
         <Navbar />
         <div className="App">
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/store" element={<Homepage />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wardrobe" element={<Wardrobe />} />
             <Route path="/admin" element={<AdminPanel />} />
@@ -35,6 +38,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/admin/blog" element={<CreateBlog />} />
             <Route path="/admin/allblog" element={<AllBlogs />} />
+            <Route path="/members" element={<Members />} />
 
           </Routes>
         </div>

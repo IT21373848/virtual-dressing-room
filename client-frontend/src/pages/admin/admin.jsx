@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./AdminPanel.css";
 
 function AdminPanel() {
   const [Products, setProducts] = useState([]);
@@ -101,52 +100,80 @@ function AdminPanel() {
   };
 
   return (
-    <div className="App">
-        <h3 className="flex items-center justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray">Add Produsts</h3>
-      <div className="grid gap-6 mb-6 md:grid-cols-2">
+    <>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="w-full max-w-md p-4 border rounded-lg shadow-lg">
+        <h3 className="mb-4 text-3xl font-extrabold text-gray-900">
+          Add Products
+        </h3>
         <form>
-        <div className="mb-6">
-          <input
-            type="text"
-            placeholder="Image URL"
-            name="image"
-            value={formData.image}
-            onChange={handleInputChange}
-          />
+          <div className="mb-4">
+            <input
+              type="text"
+              placeholder="Image URL"
+              name="image"
+              value={formData.image}
+              onChange={handleInputChange}
+              className="border p-2 w-full"
+            />
           </div>
-          <div className="mb-6">
-          <input
-            type="text"
-            placeholder="Title"
-            name="title"
-            value={formData.title}
-            onChange={handleInputChange}
-          />
+          <div className="mb-4">
+            <input
+              type="text"
+              placeholder="Title"
+              name="title"
+              value={formData.title}
+              onChange={handleInputChange}
+              className="border p-2 w-full"
+            />
           </div>
-          <div className="mb-6">
-          <input
-            type="number"
-            placeholder="Price"
-            name="price"
-            value={formData.price}
-            onChange={handleInputChange}
-          />
+          <div className="mb-4">
+            <input
+              type="number"
+              placeholder="Price"
+              name="price"
+              value={formData.price}
+              onChange={handleInputChange}
+              className="border p-2 w-full"
+            />
           </div>
           <br />
           {mode === 'update' ? (
             <div>
-              <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={handleUpdateProduct}>Update</button>
-              <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={handleCancelEdit}>Cancel</button>
+              <button
+                type="button"
+                onClick={handleUpdateProduct}
+                className="bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-sm px-4 py-2"
+              >
+                Update
+              </button>
+              <button
+                type="button"
+                onClick={handleCancelEdit}
+                className="bg-gray-400 hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 text-gray-900 font-medium rounded-lg text-sm px-4 py-2 ml-2"
+              >
+                Cancel
+              </button>
             </div>
           ) : (
-            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={handleAddProduct}>Add</button>
+            <button
+              type="button"
+              onClick={handleAddProduct}
+              className="bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-sm px-4 py-2"
+            >
+              Add
+            </button>
           )}
         </form>
       </div>
-      <h3 className="flex items-center justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray">Products</h3>
-      <div className="relative overflow-x-auto">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    </div>
+
+    <h3 className="mt-8 mb-4 text-3xl font-extrabold text-gray-900">
+          Products
+        </h3>
+        <div className="overflow-x-auto">
+        <table className="w-full table-auto border border-gray-200 rounded-lg">
+          <thead className="text-xs text-white bg-black dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">Image</th>
               <th scope="col" className="px-6 py-3">Title</th>
@@ -156,20 +183,31 @@ function AdminPanel() {
           </thead>
           <tbody>
             {Products.map((product) => (
-              <tr key={product._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="px-6 py-4">{product.image}</td>
-                <td class="px-6 py-4">{product.title}</td>
-                <td class="px-6 py-4">{product.price}</td>
-                <td class="px-6 py-4">
-                  <button onClick={() => handleEditProduct(product)}>Update</button>
-                  <button onClick={() => handleDeleteProduct(product._id)}>Delete</button>
+              <tr key={product._id} className="bg-white dark:bg-gray-800">
+                <td className="border px-4 py-2">{product.image}</td>
+                <td className="border px-4 py-2">{product.title}</td>
+                <td className="border px-4 py-2">{product.price}</td>
+                <td className="border px-6 py-4">
+                  <button
+                    onClick={() => handleEditProduct(product)}
+                    className="bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-sm px-4 py-2 mb-2 block w-full h-10"
+                  >
+                    Update
+                  </button>
+                  <button
+                    onClick={() => handleDeleteProduct(product._id)}
+                    className="bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-sm px-4 py-2 block w-full h-10"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 }
+
 export default AdminPanel;
