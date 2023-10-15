@@ -125,7 +125,7 @@ users.route("/update/:id").put(async (req, res) => {
     users.first_name = req.body.first_name;
     users.last_name = req.body.last_name;
     users.email = req.body.email;
-    users.passsword = req.body.password;
+    users.password = req.body.password;
 
     await users.save();
     res.json(users);

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router
 
 const heroSectionStyle = {
-    backgroundImage: `url('https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-willo-m-3768005.jpg&fm=jpg')`,
+    backgroundImage: `url("https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_1280.jpg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -29,31 +29,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-12">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold text-gray-900 mb-6">
-            Featured Products
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* Product Cards */}
-            {/* You can map through your product data and create cards here */}
-            <div className="bg-white p-4 shadow-lg rounded-lg">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Product"
-                className="w-full h-40 object-cover mb-4"
-              />
-              <h4 className="text-xl font-semibold mb-2">Product Name</h4>
-              <p className="text-gray-600">$99.99</p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full mt-4 transition duration-300">
-                Add to Cart
-              </button>
-            </div>
-            {/* Repeat the above card structure for each featured product */}
-          </div>
-        </div>
-      </section>
 
       {/* Newsletter Section */}
       <section className="bg-gray-100 py-12">
