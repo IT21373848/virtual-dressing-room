@@ -1,0 +1,89 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+.title1{
+  position: absolute;
+  color: white;
+  top: 50vh;
+  right: 10vh;
+
+}
+
+.soundBT{
+  position: absolute;
+  top: 90vh;
+
+}
+
+.soundBT_BT{
+  background-color: black;
+  color: white;
+
+}
+
+
+.configurator{
+  position:absolute;
+  right: 24px;
+  width: 320px;
+  bottom: 0vh;
+  color: white;
+  padding: 16px;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 32px;
+  background-color: black;
+  border-radius: 10%;
+}
+
+.configurator_section_title{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.configurator_section_value{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* .item_label{
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: solid 2px #999999;
+} */
+
+.item_dot {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  border: 5px;
+  border-color: white; 
+  border-style:double;
+  display: inline-block;
+  margin-right: 8px;
+  background-color: gray;
+  transition: .4s background-color;
+}
+
+
+.item{
+  transition: .4s opacity;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.item.item--active.item_label{
+  color: white;
+}
+
