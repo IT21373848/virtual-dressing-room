@@ -62,6 +62,7 @@ const Navbar = () => {
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/wardrobe">Wardrobe</NavLink></a>
                 <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/blog">Blog</NavLink></a>
                 {isLoggedIn ? userLink : loginRegLink}
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><NavLink to="/members">Members</NavLink></a>
               </div>
             </div>
           </div>
@@ -98,6 +99,7 @@ const Navbar = () => {
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/store">Store</NavLink></a>
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/wardrobe">Wardrobe</NavLink></a>
           <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/blog">Blog</NavLink></a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><NavLink to="/blog">Members</NavLink></a>
         </div>
       </div>
     </nav>
