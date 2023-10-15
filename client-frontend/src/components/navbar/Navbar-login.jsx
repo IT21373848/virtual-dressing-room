@@ -41,7 +41,7 @@ class NavbarLogin extends Component {
         <div className="flex justify-between items-center p-5">
           <Link to="/" className="nav-link">
             <img
-              src="../../../public/vite.svg"
+              src="../../../images/logo.png"
               alt="home"
               className=" h-10 w-10"
             />
