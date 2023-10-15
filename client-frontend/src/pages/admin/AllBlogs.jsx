@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import UpdateBlogModal from '../../components/UpdateBlogModal';
 
 const AllBlogs = () => {
 
@@ -72,7 +73,7 @@ const AllBlogs = () => {
                                         {el.createdAt}
                                     </td>
                                     <td class="px-6 py-4">
-                                    <button onClick={() => updateBlog(el._id)} class="font-medium text-blue-600 dark:text-blue-500 hover:underline p-2 ">Edit </button>
+                                     <UpdateBlogModal blog={el}/>
                                         <button onClick={() => deleteBlog(el._id)} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
                                     </td>
                                 </tr>
