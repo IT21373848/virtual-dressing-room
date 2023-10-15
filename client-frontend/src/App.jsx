@@ -14,10 +14,14 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
 import LandingPage from "./pages/landingpage";
-import Members from "./pages/Members";
+
 import NavbarLogin from "./components/navbar/Navbar-login";
 import CreateBlog from "./pages/admin/CreateBlog";
 import AllBlogs from "./pages/admin/AllBlogs";
+
+import MyHome from "./pages/DressingRoom/MyHome";
+import AppMale from "./pages/DressingRoom/AppMale";
+import AppFemale from "./pages/DressingRoom/AppFemale";
 
 function App() {
   return (
@@ -38,8 +42,9 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/admin/blog" element={<CreateBlog />} />
             <Route path="/admin/allblog" element={<AllBlogs />} />
-            <Route path="/members" element={<Members />} />
-
+            <Route path="/dressroom" element={<MyHome />} />
+            <Route path="/dressroom/male" element={<AppMale />} />
+            <Route path="/dressroom/Female" element={<AppFemale />} />
           </Routes>
         </div>
       </Router>
