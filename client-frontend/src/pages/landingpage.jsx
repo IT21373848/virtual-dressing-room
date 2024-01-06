@@ -13,11 +13,11 @@ const LandingPage = () => {
     <div>
       {/* Hero Section */}
       <section className="h-screen flex items-center" style={heroSectionStyle}>
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-extrabold text-white mb-4">
+        <div className="container mx-auto text-center bg-transparent">
+          <h2 className="text-5xl font-extrabold text-black mb-4">
             Discover the Latest Trends
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-black-200 mb-8">
             Shop our newest collection of clothing and accessories.
           </p>
           <Link
